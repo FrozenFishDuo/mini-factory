@@ -1,0 +1,26 @@
+/assets  -- Where all the Game Assets go :D
+	/audio  -- Audio Files
+		/music  -- Music tracks
+		/sfx  -- Sound effects
+	/textures  -- Sprites, tilesets, images
+	/fonts  -- Font files
+	/shaders  -- Shader files
+
+/data  -- Save data and config files (DON'T compile with final binary!)
+
+/docs  -- Project documentation, team rules, notes, etc.
+
+/scenes  -- All .tscn scenes
+	/levels  -- Level scenes
+	/world_objects  -- Instanced world objects (machines, doors, etc.)
+	/main  -- Main scenes (Main Menu, Pause Menu, etc.)
+	/ui  -- UI pieces (menus, HUDs, buttons, popups)
+
+/scripts
+	/core  -- Core game logic scripts
+		/autoload  -- Autoloaded game manager scripts (GameManager.gd, SaveManager.gd)
+		/local  -- Local control scripts for major scenes (Level.gd, MainMenu.gd)
+	/systems  -- Systems that add functionality (BaseMachine.gd, InventorySystem.gd, DialogueSystem.gd)
+	/ui  -- Scripts for interactive UI pieces (HUD.gd, PauseMenu.gd)
+	/utils  -- Utility/helper classes (MathHelper.gd, StringUtils.gd)
+	/world_objects  -- Scripts for specific world objects (Machine_X.gd, Lever.gd, Chest.gd)

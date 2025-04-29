@@ -1,0 +1,11 @@
+This Game is:
+	topdown
+	factory based
+	point n' click
+	unlockable areas
+	tech tree
+	power systems
+	teired machines
+	
+This Game is Not:
+	fortnite
