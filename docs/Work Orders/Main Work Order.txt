@@ -1,0 +1,4 @@
+We need to work on (make):
+	- The audio manager
+	- The Ui manager
+		- The Main Menu
