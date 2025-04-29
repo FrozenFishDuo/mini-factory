@@ -1,7 +1,0 @@
-I need to figure out how to make this happen:
-
-1. ID System
-	new game object askes for id from gameobject manager
-	game object manager needs to ask for the reference of the game object BEFORE giving the id
-	that way it can associate ids with actuall references (to transfer numbers and stuff)
-	
