@@ -9,3 +9,4 @@ static func register_game_object(game_object: GameObject) -> int:
 	var registry_item: Array = [_id_count, GameObject]
 	object_registry.append(registry_item)
 	return _id_count
+# test
