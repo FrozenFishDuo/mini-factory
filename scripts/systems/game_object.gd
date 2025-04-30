@@ -16,3 +16,4 @@ var inventory: Inventory
 
 func _ready() -> void:
 	id = GameObjectManager.register_game_object(self)
+	
