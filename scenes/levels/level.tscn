@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://b37mu0jb4rq6j"]
+[gd_scene load_steps=3 format=3 uid="uid://b37mu0jb4rq6j"]
+
+[ext_resource type="TileSet" uid="uid://b7bgd1tfmh2ly" path="res://assets/tilesets/level.tres" id="2_b2cq8"]
+[ext_resource type="Script" uid="uid://ctdvq7emjxtkh" path="res://scripts/systems/terrain_generation/terrain_generate.gd" id="2_bovvr"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("2_bovvr")
+
+[node name="Terrain" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_b2cq8")
+
+[node name="TerrainOre" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_b2cq8")
