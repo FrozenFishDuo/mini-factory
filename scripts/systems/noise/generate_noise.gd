@@ -24,8 +24,7 @@ static func generate_2d(seed, offset, layers, smoothness) ->  Dictionary:
 	var grid = {}
 	for x in map_size:
 		for y in map_size:
-			var val =  noise.get_noise_2d(x, y)
-			grid[Vector2i(x,y)] = val
+			grid[Vector2i(x,y)] = noise.get_noise_2d(x, y)
 	
 	#enjoy!
 	return grid
