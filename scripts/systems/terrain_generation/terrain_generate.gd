@@ -25,3 +25,9 @@ func _ready():
 		var value = grid[position]
 		if value > ore_value:
 			ore_map.set_cell(position, 0, Vector2i(randi_range(0, 2), 10))
+func _process(delta: float) -> void:
+	print(":asdasd")
+	if Input.is_key_pressed(KEY_A):
+		InputManager.cursor_set("default")
+	if Input.is_key_pressed(KEY_L):
+		InputManager.cursor_set("grid_select")
