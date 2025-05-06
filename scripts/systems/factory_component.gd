@@ -1,5 +1,5 @@
 extends Node
-class_name mechanism
+class_name FactoryComponent
 
 var id: int = 0
 
@@ -9,7 +9,6 @@ var input: Array[int] = []
 var output: Array[int] = []
 
 var contents: Array[Item] = []
-
 
 var progress: int = 0
 
