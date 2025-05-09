@@ -1,11 +1,13 @@
 extends Node
 
+class_name TerrainGenerate
+
 @onready var tile_map := $Terrain
 @onready var ore_map := $TerrainOre
 var dirt_value = 0.35# what number to use to discard if a piece of terrain is dirt, letting the grass remain?(smaller == more dirt)
 var ore_value = 0.75# same as above
 
-func _ready():
+func _init():
 	# generate grass
 	var grid = GenerateNoise.generate_2d(1337, 0.5, 5, 0.05)
 	for position in grid:
