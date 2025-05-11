@@ -1,13 +1,11 @@
 extends Node
 
-
 static var _id: int = 0
-
-static var _object_registry: Array = []
+static var _object_registry: Array[Dictionary] = []
 
 ## Registers a new game object and returns its unique ID.
-static func register_game_object(game_object: FactoryComponent) -> int:
-	_object_registry.append([_id, game_object])
+static func register_game_object(factory_component: FactoryComponent) -> int:
+	_object_registry.append([_id, factory_component])
 	_id += 1
 	return _id - 1 # the last elements id
 
