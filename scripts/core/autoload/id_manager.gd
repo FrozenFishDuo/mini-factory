@@ -1,17 +1,16 @@
 extends Node
 
 static var _id: int = 0
-
-static var _object_registry: Array = []
+static var _object_registry: Array[Dictionary] = []
 
 ## Registers a new game object and returns its unique ID.
-static func register_game_object(game_object: GameObject) -> int:
-	_object_registry.append([_id, game_object])
+static func register_game_object(factory_component: FactoryComponent) -> int:
+	_object_registry.append([_id, factory_component])
 	_id += 1
 	return _id - 1 # the last elements id
 
 ## Returns the object in the registry that matches the input ID.
-static func get_object_by_id(id: int) -> GameObject:
+static func get_object_by_id(id: int) -> FactoryComponent:
 	for entry in _object_registry:
 		if entry[0] == id:
 			return entry[1]
@@ -19,7 +18,7 @@ static func get_object_by_id(id: int) -> GameObject:
 
 
 ## Returns the ID of the object in the registry if it matches the given game_object.
-static func get_id_by_object(game_object: GameObject) -> int:
+static func get_id_by_object(game_object: FactoryComponent) -> int:
 	for entry in _object_registry:
 		if game_object == entry[1]:
 			return entry[0]
