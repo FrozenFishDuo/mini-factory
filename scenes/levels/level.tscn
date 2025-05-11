@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://b37mu0jb4rq6j"]
+[gd_scene load_steps=5 format=3 uid="uid://b37mu0jb4rq6j"]
+
+[ext_resource type="Script" uid="uid://bwmskkquhhn04" path="res://scripts/systems/level.gd" id="1_xb4v1"]
+[ext_resource type="TileSet" uid="uid://b7bgd1tfmh2ly" path="res://assets/tilesets/level.tres" id="2_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://dmbxhpedbks3d" path="res://assets/mechanism/conveyor/conveyor.tscn" id="3_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://8i7yt673ot3j" path="res://scenes/levels/pause_menu.tscn" id="4_xb4v1"]
 
 [node name="Level" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_xb4v1")
+
+[node name="Game" type="Node2D" parent="."]
+process_mode = 1
+
+[node name="Terrain" type="TileMapLayer" parent="Game"]
+tile_set = ExtResource("2_b2cq8")
+
+[node name="TerrainOre" type="TileMapLayer" parent="Game"]
+tile_set = ExtResource("2_b2cq8")
+
+[node name="AnimatedSprite2D" parent="Game" instance=ExtResource("3_b2cq8")]
+position = Vector2(43, 26)
+frame_progress = 0.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_xb4v1")]

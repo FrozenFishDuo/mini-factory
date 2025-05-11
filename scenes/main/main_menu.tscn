@@ -2,7 +2,44 @@
 
 [sub_resource type="GDScript" id="GDScript_1i17u"]
 script/source = "extends Node2D
+
+@onready var button_new = $VBoxContainer/NewSave
+@onready var button_load = $VBoxContainer/LoadSave
+@onready var button_exit = $VBoxContainer/Exit
+
+func _ready():
+	# Connect buttons to methods
+	button_new.pressed.connect(play)
+	button_load.pressed.connect(load_save)
+	button_exit.pressed.connect(exit)
+
+func play():
+	get_tree().change_scene_to_file(\"res://scenes/levels/level.tscn\")
+	
+func load_save():
+	get_tree().change_scene_to_file(\"res://scenes/levels/level.tscn\")
+
+func exit():
+	get_tree().quit()
 "
 
 [node name="MainMenu" type="Node2D"]
 script = SubResource("GDScript_1i17u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 573.0
+offset_top = 294.0
+offset_right = 614.0
+offset_bottom = 360.0
+
+[node name="NewSave" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "New Save"
+
+[node name="LoadSave" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Load Save"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
